@@ -34,7 +34,7 @@ namespace MixPanelCSharpAPI {
 
         //LEMBRAR DE ADCIONAR <%@ Page Async="true" %> na pagina ASPX
         protected async void Button1_Click(object sender, EventArgs e) {
-            var mc = new MixpanelClient("[API SECRET]");
+            var mc = new MixpanelClient("[API TOKEN]");
             await mc.TrackAsync("Assinatura", new {
                 idPlano = "12345",
                 dtPagamento = DateTime.Now,
@@ -46,7 +46,7 @@ namespace MixPanelCSharpAPI {
         //{
         //  "event": "Assinatura",
         //  "properties": {
-        //    "token": "e3bc4100330c35722740fb8c6f5abddc",
+        //    "token": "",
         //    "idPlano": "12345",
         //    "dtPagamento": "2015/06/06 00:00:00",
         //    "tpPagamento": "Boleto"
